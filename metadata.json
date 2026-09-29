@@ -1,0 +1,6 @@
+{
+  "name": "RSA Neuro-Symbolic Explorer",
+  "description": "Interactive demonstration of the TKHD+MDN method for 16-bit RSA factorization, combining gradient descent and neural networks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
