@@ -25,7 +25,7 @@ async function startServer() {
     console.log(`Solving for N (${bits}-bit): ${n}`);
 
     // Pass the decimal string as an argument without invoking a shell.
-    const child = spawn("python3", ["solver_api.py", n, String(bits)]);
+    const child = spawn(process.env.PYTHON_BIN ?? "python3", ["solver_api.py", n, String(bits)]);
     let stdout = "";
     let stderr = "";
     child.stdout.setEncoding("utf8");

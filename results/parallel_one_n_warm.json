@@ -1,0 +1,287 @@
+{
+  "case": {
+    "n": 2401060117,
+    "p": 40009,
+    "q": 60013
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "runs": [
+    {
+      "workers": 1,
+      "warmed_processes": 1,
+      "setup_s": 4.52663289100019,
+      "all_done_s": 5.098024312001144,
+      "first_success_s": 0.4879451650012925,
+      "success_count": 7,
+      "total_candidate_checks": 3539631,
+      "completed": [
+        {
+          "seed": 0,
+          "success": true,
+          "completed_s": 0.4879451650012925,
+          "solver_s": 0.4670076570000674,
+          "candidate_checks": 306927
+        },
+        {
+          "seed": 1,
+          "success": true,
+          "completed_s": 1.324888754001222,
+          "solver_s": 0.833955281001181,
+          "candidate_checks": 613603
+        },
+        {
+          "seed": 2,
+          "success": false,
+          "completed_s": 2.605147300000681,
+          "solver_s": 1.281547167998724,
+          "candidate_checks": 877029
+        },
+        {
+          "seed": 3,
+          "success": true,
+          "completed_s": 3.0896507170000405,
+          "solver_s": 0.48334479500044836,
+          "candidate_checks": 307895
+        },
+        {
+          "seed": 4,
+          "success": true,
+          "completed_s": 3.6400947729998734,
+          "solver_s": 0.5490389259994117,
+          "candidate_checks": 409647
+        },
+        {
+          "seed": 5,
+          "success": true,
+          "completed_s": 4.049710770999809,
+          "solver_s": 0.4083363300014753,
+          "candidate_checks": 307462
+        },
+        {
+          "seed": 6,
+          "success": true,
+          "completed_s": 4.5597938999999315,
+          "solver_s": 0.5098139599995193,
+          "candidate_checks": 307716
+        },
+        {
+          "seed": 7,
+          "success": true,
+          "completed_s": 5.098015968000254,
+          "solver_s": 0.5372773750004853,
+          "candidate_checks": 409352
+        }
+      ]
+    },
+    {
+      "workers": 2,
+      "warmed_processes": 2,
+      "setup_s": 5.047806890999709,
+      "all_done_s": 3.8948675419997016,
+      "first_success_s": 0.8329217900009098,
+      "success_count": 7,
+      "total_candidate_checks": 3539631,
+      "completed": [
+        {
+          "seed": 0,
+          "success": true,
+          "completed_s": 0.8329217900009098,
+          "solver_s": 0.7998631959999329,
+          "candidate_checks": 306927
+        },
+        {
+          "seed": 1,
+          "success": true,
+          "completed_s": 1.2881017500003509,
+          "solver_s": 1.2574146360002487,
+          "candidate_checks": 613603
+        },
+        {
+          "seed": 3,
+          "success": true,
+          "completed_s": 2.0540081950002786,
+          "solver_s": 0.7580025650004245,
+          "candidate_checks": 307895
+        },
+        {
+          "seed": 2,
+          "success": false,
+          "completed_s": 2.578228037000372,
+          "solver_s": 1.7439859669993893,
+          "candidate_checks": 877029
+        },
+        {
+          "seed": 4,
+          "success": true,
+          "completed_s": 2.985679068000536,
+          "solver_s": 0.935066910000387,
+          "candidate_checks": 409647
+        },
+        {
+          "seed": 5,
+          "success": true,
+          "completed_s": 3.2343113210008596,
+          "solver_s": 0.6550602480001544,
+          "candidate_checks": 307462
+        },
+        {
+          "seed": 6,
+          "success": true,
+          "completed_s": 3.55093706200023,
+          "solver_s": 0.5644909430011467,
+          "candidate_checks": 307716
+        },
+        {
+          "seed": 7,
+          "success": true,
+          "completed_s": 3.894835649000015,
+          "solver_s": 0.6595229729991843,
+          "candidate_checks": 409352
+        }
+      ]
+    },
+    {
+      "workers": 4,
+      "warmed_processes": 4,
+      "setup_s": 5.514183860999765,
+      "all_done_s": 2.220710704999874,
+      "first_success_s": 0.6081429749992822,
+      "success_count": 7,
+      "total_candidate_checks": 3539631,
+      "completed": [
+        {
+          "seed": 0,
+          "success": true,
+          "completed_s": 0.6081429749992822,
+          "solver_s": 0.5825524960000621,
+          "candidate_checks": 306927
+        },
+        {
+          "seed": 3,
+          "success": true,
+          "completed_s": 0.7885976559991832,
+          "solver_s": 0.7559231409995846,
+          "candidate_checks": 307895
+        },
+        {
+          "seed": 1,
+          "success": true,
+          "completed_s": 1.344250246998854,
+          "solver_s": 1.3131802410007367,
+          "candidate_checks": 613603
+        },
+        {
+          "seed": 4,
+          "success": true,
+          "completed_s": 1.3614256999990175,
+          "solver_s": 0.7522653739997622,
+          "candidate_checks": 409647
+        },
+        {
+          "seed": 5,
+          "success": true,
+          "completed_s": 1.3670489819996874,
+          "solver_s": 0.5791731760000403,
+          "candidate_checks": 307462
+        },
+        {
+          "seed": 2,
+          "success": false,
+          "completed_s": 1.5176933049988293,
+          "solver_s": 1.4954544409993105,
+          "candidate_checks": 877029
+        },
+        {
+          "seed": 6,
+          "success": true,
+          "completed_s": 1.9604125169989857,
+          "solver_s": 0.6153070710006432,
+          "candidate_checks": 307716
+        },
+        {
+          "seed": 7,
+          "success": true,
+          "completed_s": 2.2206844169995748,
+          "solver_s": 0.8583319070003199,
+          "candidate_checks": 409352
+        }
+      ]
+    },
+    {
+      "workers": 8,
+      "warmed_processes": 8,
+      "setup_s": 6.5038725179983885,
+      "all_done_s": 1.5226040780016774,
+      "first_success_s": 0.8436341370015725,
+      "success_count": 7,
+      "total_candidate_checks": 3539631,
+      "completed": [
+        {
+          "seed": 3,
+          "success": true,
+          "completed_s": 0.8436341370015725,
+          "solver_s": 0.8026947610014759,
+          "candidate_checks": 307895
+        },
+        {
+          "seed": 5,
+          "success": true,
+          "completed_s": 0.8903213400008099,
+          "solver_s": 0.8522025080001185,
+          "candidate_checks": 307462
+        },
+        {
+          "seed": 6,
+          "success": true,
+          "completed_s": 0.9225627660016471,
+          "solver_s": 0.8951448460011306,
+          "candidate_checks": 307716
+        },
+        {
+          "seed": 0,
+          "success": true,
+          "completed_s": 0.9345072820015048,
+          "solver_s": 0.8968619759998546,
+          "candidate_checks": 306927
+        },
+        {
+          "seed": 4,
+          "success": true,
+          "completed_s": 0.9832113190004748,
+          "solver_s": 0.9461195990006672,
+          "candidate_checks": 409647
+        },
+        {
+          "seed": 7,
+          "success": true,
+          "completed_s": 1.0635945520007226,
+          "solver_s": 1.0314810229992872,
+          "candidate_checks": 409352
+        },
+        {
+          "seed": 1,
+          "success": true,
+          "completed_s": 1.216503196001213,
+          "solver_s": 1.1812246099998447,
+          "candidate_checks": 613603
+        },
+        {
+          "seed": 2,
+          "success": false,
+          "completed_s": 1.5225660100004461,
+          "solver_s": 1.4851088550003624,
+          "candidate_checks": 877029
+        }
+      ]
+    }
+  ]
+}

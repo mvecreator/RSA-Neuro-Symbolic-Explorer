@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "seed": 20260929,
+    "samples_per_size": 20,
+    "max_steps": 500,
+    "num_attempts": 1000,
+    "search_radius": 1000,
+    "torch": "2.14.0+cpu",
+    "sympy": "1.14.0",
+    "python": "3.12.14",
+    "model_load_seconds": 0.2652913840011024,
+    "archive_test_moduli_excluded": 200,
+    "training_set_unknown": true
+  },
+  "case": {
+    "n": 2401060117,
+    "p": 40009,
+    "q": 60013
+  },
+  "runs": [
+    {
+      "workers": 1,
+      "n": 2401060117,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "completed": [
+        {
+          "seed": 0,
+          "success": true,
+          "completed_s": 4.805083426001147,
+          "solver_s": 0.4088032319996273,
+          "candidate_checks": 306927
+        },
+        {
+          "seed": 1,
+          "success": true,
+          "completed_s": 5.926016446001086,
+          "solver_s": 0.9513801829998556,
+          "candidate_checks": 613603
+        },
+        {
+          "seed": 2,
+          "success": false,
+          "completed_s": 7.361622771999464,
+          "solver_s": 1.2013791410008707,
+          "candidate_checks": 877029
+        },
+        {
+          "seed": 3,
+          "success": true,
+          "completed_s": 7.9498276470003475,
+          "solver_s": 0.3903371029991831,
+          "candidate_checks": 307895
+        },
+        {
+          "seed": 4,
+          "success": true,
+          "completed_s": 8.676092388999677,
+          "solver_s": 0.6243764119990374,
+          "candidate_checks": 409647
+        },
+        {
+          "seed": 5,
+          "success": true,
+          "completed_s": 9.24727188200086,
+          "solver_s": 0.40676079700097034,
+          "candidate_checks": 307462
+        },
+        {
+          "seed": 6,
+          "success": true,
+          "completed_s": 9.863027815999885,
+          "solver_s": 0.5279788990010275,
+          "candidate_checks": 307716
+        },
+        {
+          "seed": 7,
+          "success": true,
+          "completed_s": 10.55527371900098,
+          "solver_s": 0.5504730860011477,
+          "candidate_checks": 409352
+        }
+      ],
+      "first_success_s": 4.805083426001147,
+      "all_done_s": 11.188093812999796,
+      "success_count": 7,
+      "total_candidate_checks": 3539631
+    },
+    {
+      "workers": 2,
+      "n": 2401060117,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "completed": [
+        {
+          "seed": 0,
+          "success": true,
+          "completed_s": 4.961202165000941,
+          "solver_s": 0.4962606629997026,
+          "candidate_checks": 306927
+        },
+        {
+          "seed": 1,
+          "success": true,
+          "completed_s": 5.2595620270003565,
+          "solver_s": 0.7736516860004485,
+          "candidate_checks": 613603
+        },
+        {
+          "seed": 3,
+          "success": true,
+          "completed_s": 6.0541881839999405,
+          "solver_s": 0.6072624499993253,
+          "candidate_checks": 307895
+        },
+        {
+          "seed": 2,
+          "success": false,
+          "completed_s": 6.510488751000594,
+          "solver_s": 1.4109122049994767,
+          "candidate_checks": 877029
+        },
+        {
+          "seed": 4,
+          "success": true,
+          "completed_s": 7.026624735000951,
+          "solver_s": 0.7802641969992692,
+          "candidate_checks": 409647
+        },
+        {
+          "seed": 5,
+          "success": true,
+          "completed_s": 7.287293630000931,
+          "solver_s": 0.5863683229999879,
+          "candidate_checks": 307462
+        },
+        {
+          "seed": 6,
+          "success": true,
+          "completed_s": 7.5243177140000626,
+          "solver_s": 0.3733693020003557,
+          "candidate_checks": 307716
+        },
+        {
+          "seed": 7,
+          "success": true,
+          "completed_s": 8.064061263999974,
+          "solver_s": 0.6331278769994242,
+          "candidate_checks": 409352
+        }
+      ],
+      "first_success_s": 4.961202165000941,
+      "all_done_s": 8.72319682700072,
+      "success_count": 7,
+      "total_candidate_checks": 3539631
+    },
+    {
+      "workers": 4,
+      "n": 2401060117,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "completed": [
+        {
+          "seed": 0,
+          "success": true,
+          "completed_s": 5.353226684001129,
+          "solver_s": 0.6447406019997288,
+          "candidate_checks": 306927
+        },
+        {
+          "seed": 3,
+          "success": true,
+          "completed_s": 5.676361277000979,
+          "solver_s": 0.7857808690005186,
+          "candidate_checks": 307895
+        },
+        {
+          "seed": 1,
+          "success": true,
+          "completed_s": 6.057324190000145,
+          "solver_s": 1.2781155300017417,
+          "candidate_checks": 613603
+        },
+        {
+          "seed": 4,
+          "success": true,
+          "completed_s": 6.3304542530004255,
+          "solver_s": 0.7534535039994807,
+          "candidate_checks": 409647
+        },
+        {
+          "seed": 5,
+          "success": true,
+          "completed_s": 6.492405322000195,
+          "solver_s": 0.5901796759990248,
+          "candidate_checks": 307462
+        },
+        {
+          "seed": 2,
+          "success": false,
+          "completed_s": 6.549907994000023,
+          "solver_s": 1.7745136419998744,
+          "candidate_checks": 877029
+        },
+        {
+          "seed": 6,
+          "success": true,
+          "completed_s": 6.877950084000986,
+          "solver_s": 0.5785524900002201,
+          "candidate_checks": 307716
+        },
+        {
+          "seed": 7,
+          "success": true,
+          "completed_s": 7.082978502001424,
+          "solver_s": 0.6705077179994987,
+          "candidate_checks": 409352
+        }
+      ],
+      "first_success_s": 5.353226684001129,
+      "all_done_s": 7.807650390001072,
+      "success_count": 7,
+      "total_candidate_checks": 3539631
+    },
+    {
+      "workers": 8,
+      "n": 2401060117,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "completed": [
+        {
+          "seed": 0,
+          "success": true,
+          "completed_s": 6.169548276999194,
+          "solver_s": 0.5902767389998189,
+          "candidate_checks": 306927
+        },
+        {
+          "seed": 4,
+          "success": true,
+          "completed_s": 6.284919858999274,
+          "solver_s": 0.6894424439997238,
+          "candidate_checks": 409647
+        },
+        {
+          "seed": 3,
+          "success": true,
+          "completed_s": 6.326329362000251,
+          "solver_s": 0.6898597260005772,
+          "candidate_checks": 307895
+        },
+        {
+          "seed": 6,
+          "success": true,
+          "completed_s": 6.412974233000568,
+          "solver_s": 0.7378862000005029,
+          "candidate_checks": 307716
+        },
+        {
+          "seed": 5,
+          "success": true,
+          "completed_s": 6.463581895999596,
+          "solver_s": 0.8130240430000413,
+          "candidate_checks": 307462
+        },
+        {
+          "seed": 7,
+          "success": true,
+          "completed_s": 6.589699751999433,
+          "solver_s": 0.8746804389993486,
+          "candidate_checks": 409352
+        },
+        {
+          "seed": 1,
+          "success": true,
+          "completed_s": 6.747112539000227,
+          "solver_s": 1.1368209120009851,
+          "candidate_checks": 613603
+        },
+        {
+          "seed": 2,
+          "success": false,
+          "completed_s": 6.955231665999236,
+          "solver_s": 1.3627525669999159,
+          "candidate_checks": 877029
+        }
+      ],
+      "first_success_s": 6.169548276999194,
+      "all_done_s": 7.799915527999474,
+      "success_count": 7,
+      "total_candidate_checks": 3539631
+    }
+  ]
+}

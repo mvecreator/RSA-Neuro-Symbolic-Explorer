@@ -50,7 +50,7 @@ def generate_dataset(num_samples, min_bits, max_bits, file_path):
 
 class RSADataset(Dataset):
     def __init__(self, file_path):
-        self.data = torch.load(file_path)
+        self.data = torch.load(file_path, weights_only=True)
     def __len__(self):
         return len(self.data)
     def __getitem__(self, idx):
@@ -115,8 +115,8 @@ class MDNOracle:
     def __init__(self, model_p_path, model_q_path, device):
         self.model_p = MixtureDensityNetwork().to(device)
         self.model_q = MixtureDensityNetwork().to(device)
-        self.model_p.load_state_dict(torch.load(model_p_path, map_location=device))
-        self.model_q.load_state_dict(torch.load(model_q_path, map_location=device))
+        self.model_p.load_state_dict(torch.load(model_p_path, map_location=device, weights_only=True))
+        self.model_q.load_state_dict(torch.load(model_q_path, map_location=device, weights_only=True))
         self.model_p.eval()
         self.model_q.eval()
         self.device = device

@@ -2,7 +2,7 @@ import json
 import sys
 import math
 
-def solve_n(n_val, bit_length=16):
+def solve_n(n_val, bit_length=16, *, oracle=None, max_steps=500, num_attempts=1000, search_radius=1000):
     n_int = int(n_val)
     
     if bit_length >= 2048:
@@ -28,21 +28,20 @@ def solve_n(n_val, bit_length=16):
     landscape = CryptoLandscape(n)
     
     # Load Oracle
-    try:
-        oracle = MDNOracle("mdn_p_massive.pth", "mdn_q_massive.pth", DEVICE)
-    except Exception as e:
-        return {"error": f"Failed to load oracle: {str(e)}"}
+    if oracle is None:
+        try:
+            oracle = MDNOracle("mdn_p_massive.pth", "mdn_q_massive.pth", DEVICE)
+        except Exception as e:
+            return {"error": f"Failed to load oracle: {str(e)}"}
 
     # Simulation Logic (adapted from simulate_rays)
     # We only need 1 ray for the API response
     batch_size = 1
     
     # Configuration from TKHD_7_Massive
-    NUM_STEPS = 500 # Reduced for API responsiveness
     GRAD_NORM_THRESH = 1.0
     DT = 0.1
     TOP_K = 5
-    NUM_ATTEMPTS = 1000
 
     # Start
     # Initial guess near sqrt(n)
@@ -57,12 +56,14 @@ def solve_n(n_val, bit_length=16):
     steps_since_last_oracle = 0
     final_p = None
     final_q = None
+    candidate_checks = 0
+    oracle_calls = 0
 
-    for step in range(NUM_STEPS):
-        x_grad = x.detach().requires_grad_(True)
-        y_grad = y.detach().requires_grad_(True)
+    for step in range(max_steps):
+        x = x.detach().requires_grad_(True)
+        y = y.detach().requires_grad_(True)
 
-        grad_x, grad_y = landscape.gradient(x_grad, y_grad)
+        grad_x, grad_y = landscape.gradient(x, y)
         grad_norm = torch.sqrt(grad_x**2 + grad_y**2).item()
 
         steps_data.append({
@@ -76,10 +77,10 @@ def solve_n(n_val, bit_length=16):
         found = False
         n_int = int(n_val)
         x_center = int(round(x.item()))
-        search_radius = 1000 # Smaller for API
         start_x = max(2, x_center - search_radius)
         end_x = min(int(math.sqrt(n_int)) + 1, x_center + search_radius)
         for test_x in range(start_x, end_x + 1):
+            candidate_checks += 1
             if test_x != 0 and n_int % test_x == 0:
                 final_p = test_x
                 final_q = n_int // test_x
@@ -98,9 +99,10 @@ def solve_n(n_val, bit_length=16):
         # Oracle activation
         if grad_norm < GRAD_NORM_THRESH or steps_since_last_oracle >= 50:
             candidates_p, candidates_q, _ = oracle.get_top_candidates(
-                n, x, y, top_k=TOP_K, num_attempts=NUM_ATTEMPTS
+                n, x, y, top_k=TOP_K, num_attempts=num_attempts
             )
             oracle_used = True
+            oracle_calls += 1
             steps_since_last_oracle = 0
             
             best_energy = float('inf')
@@ -133,7 +135,9 @@ def solve_n(n_val, bit_length=16):
         "p": final_p,
         "q": final_q,
         "steps": steps_data,
-        "oracle_used": oracle_used
+        "oracle_used": oracle_used,
+        "oracle_calls": oracle_calls,
+        "candidate_checks": candidate_checks
     }
 
 if __name__ == "__main__":
